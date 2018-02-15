@@ -17,9 +17,7 @@ class LifecycleDemoComponent extends Component {
         return (<div>
             <button onClick={this.mount.bind(this)}>Mount</button>
             <button onClick={this.unmount.bind(this)}>UnMount</button>
-            <hr/>
             <div id="placeholder"></div>
-            <hr/>
         </div>);
     }
 }

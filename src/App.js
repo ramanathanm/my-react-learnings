@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextComponent from './components/TextComponent';
 import Button from './components/Button';
 import Heart from './components/Heart';
 import Input from './components/Input';
 import LifecycleDemoComponent from './components/LifecycleDemoComponent';
+import NewPropsDemoComponent from './components/NewPropsDemoComponent';
 
 class App extends Component {
     constructor() {
@@ -46,17 +47,22 @@ class App extends Component {
                     ref={component => this.a = component}
                     update={this.updateText.bind(this)}
                 /> {this.state.a}
-                <hr/>
-                 <input
-                     ref="b"
+                <input
+                    ref="b"
                     type="text"
                     onChange={this.updateText.bind(this)}
                 /> {this.state.b}
 
                 <hr/>
+                <b>LifeCycle Events</b>
                 <LifecycleDemoComponent/>
+                <hr/>
+                <b>LifeCycle Events - New Props</b><br/>
+                <div id="newPropsRoot">
+                    <NewPropsDemoComponent/>
+                </div>
             </div>
-        );
+        )
     }
 }
 
